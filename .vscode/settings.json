@@ -1,3 +1,4 @@
 {
-    "screencastMode.onlyKeyboardShortcuts": false
+    "screencastMode.onlyKeyboardShortcuts": false,
+    "discord.enabled": true
 }
