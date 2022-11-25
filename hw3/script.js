@@ -42,14 +42,18 @@ console.log('Multiply result of a & b is ', mulResult);
 
 // NaN === NaN && true // === is more prior than && so: false && true: false
 
-// true || false && true || false // && is more prior than || so: true || false || false: true || false: true
+// true ||    || false // && is more prior than || so: true || false || false: true || false: true
 
 // (true || false) && (true || false) // true && true: true (second one)
 
 // 10 || (0 && 'dog') || '' // && is more prior than || so: 0: 10 || 0 || '': 10
 
-// (10 || 0) && ('dog' || '') // 10 || 'dog': dog (but i don't know why :D)
+// (10 || 0) && ('dog' || '') // 10 || 'dog': dog (second true)
 
+// || 1) Якщо всі значення мають false, то || поверне останнє false значення 0 || '' || fasle - false
+//    2) || повертає перше true значення 0 || '' || false
+// && 1) Якщо всі значення мають true, то && поверне останнє true 'hey' && true && 45 // 45             
+//    2) Якщо оператор && зустрічає false, він повертає його.  'hi' && false && 45 // false
 
 // Exercise 3
 
@@ -61,7 +65,7 @@ const firstOverSecond = numberOne + ' більше ' + numberTwo;
 const secondOverFirst = numberOne + ' менше ' + numberTwo;
 
 if (numberOne === numberTwo) {
-alert("Числа рівні");
+alert("Числа рівні"); 
 } else if (numberOne > numberTwo) {
 alert(firstOverSecond);
 } else {

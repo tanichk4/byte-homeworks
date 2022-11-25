@@ -1,5 +1,7 @@
 // 1
-let age, userName, surname;
+let age; 
+let userName; 
+let surname;
 age = 13;
 userName = 'Inna';
 surname = 'Kelly';
