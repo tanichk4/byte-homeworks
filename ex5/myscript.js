@@ -1,37 +1,41 @@
-// const LOGIN = 'ADMIN';
-// const PASSWORD = '1q2w3e';
+const LOGIN = 'ADMIN';
+const PASSWORD = '1q2w3e';
 
-// const authorize = () => {
-//  let userPassword;
-//  let userLogin;
-//  let isAuthSuccess = false;
+const authorize = () => {
 
-//  do{
-//     userLogin = prompt('Login:');
-//     if(!userLogin) {
-//         alert('Enter login!');
-//         continue;
-//     }
+    let isAuthSuccess = false;
+    let userAttempts = 3;
 
-//     userPassword = prompt('Password:');
-//     if(!userPassword) {
-//         alert('Enter Password!');
-//         continue;
-//     }
+    while (userAttempts !== 0){
+        let userLogin = prompt('Login: ');
 
-//     if(userPassword === PASSWORD || userLogin === LOGIN) {
-//         isAuthSuccess = true 
-//     } else {
-//         alert('Дані не вірні!')
-//     }
+        if (!userLogin) {
+            alert('Enter login: ');
+            continue;
+        }
 
-//     break;
-//  } while (!isAuthSuccess);
+        let userPassword = prompt('Password: ');
 
-//  alert('Welcome!');
-// }
+        if(!userPassword) {
+            alert('Enter password: ');
+            continue;
+        }
 
-// authorize()
+        if(userPassword === PASSWORD && userLogin === LOGIN){
+            isAuthSuccess = true;
+            break
+        }else{
+            userAttempts--
+            alert('Дані не вірні. К-сть спроб' + userAttempts)
+        }
+        if(isAuthSuccess){
+            alert('welcome!')
+        }else{
+            alert('Tries ended')
+        }
+    }
+};
+authorize()
 
 // const drawPyramid = (height) => {
 //     for(let i = 0; i < height; i++) {

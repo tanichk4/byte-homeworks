@@ -65,22 +65,37 @@ do{
 // ex 2 
 console.log('EX2');
 
-let startValue = Number(prompt('Enter start value'));
-let endValue = Number(prompt('Enter start value'));
+// let startValue = Number(prompt('Enter start value'));
+// let endValue = Number(prompt('Enter start value'));
 
-const getValues = (start, end) => {
+// const getValues = (start, end) => {
 
-};
+// };
 
-getValues(startValue, endValue);
+// getValues(startValue, endValue);
+
+// let n = Number(prompt('Enter start value'));
+// let x = Number(prompt('Enter end value'));
+
+// const nextPrime = () => {
+//     for (let i = 2; i <= n; i++) {
+//         for (let j = 2; j < i; j++) { // шукаємо дільник..
+//             if (i % j == 0){
+//                 continue;
+//             }else alert(i);
+//         }
+//     }
+// };
+
+// nextPrime(n);
 
 // ex 3
 
-do{
-    alert('You have ${x} tries left!')
+// do{
+//     alert('You have ${x} tries left!')
 
-}while(!Auth)
+// }while(!Auth)
 
-for(let tries = 3; tries < 1; tries--){
+// for(let tries = 3; tries < 1; tries--){
 
-};
+// };
