@@ -9,32 +9,32 @@ const res = toBoolean([1, 2, -20, 4, -5])
 const users = [
     {
       name: 'Sam',
-      role: 'admin'
+      role: 'admin',
       age: 25,
     },
       {
       name: 'Peter',
-      role: 'admin'
+      role: 'admin',
       age: 16,
     },
       {
       name: 'Pablo',
-      role: 'admin'
+      role: 'admin',
       age: 32,
     },
       {
       name: 'Enrico',
-      role: 'client'
+      role: 'client',
       age: 43,
     },
       {
       name: 'Mary',
-      role: 'client'
+      role: 'client',
       age: 34,
     },
       {
       name: 'Katerine',
-      role: 'guest'
+      role: 'guest',
       age: 17,
     },
 ]
