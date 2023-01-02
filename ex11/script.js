@@ -25,7 +25,8 @@
 // - комментарии (8)
 // - прочие
 
-console.dir(document.body.children[0].children[0])
+// console.dir(document.body.children[0].children[0])
+// console.dir(document.body.children[0].children[0].lastElementChild)
 
 // Навигация по DOM-дереву.
 
@@ -101,7 +102,7 @@ const parentElement = document.querySelector(".root");
 // // получить li с классом test
 // const testLi = document.querySelector(".test");
 // console.log(`testLi`, testLi);
-// // получить первый елемент с классом example
+// получить первый елемент с классом example
 // const singleExample = document.querySelector(".example");
 // console.log(`singleExample`, singleExample);
 // // получить все элемены с классом example
@@ -109,7 +110,7 @@ const parentElement = document.querySelector(".root");
 // console.log(`allExamples`, allExamples);
 // получить элемент по айди
 // const button = document.querySelector('#button');
-const button = document.getElementById("button"); // без решетки!
+// const button = document.getElementById("button"); // без решетки!
 // console.log(`button`, button)
 
 // Основые свойста DOM елементов
@@ -135,29 +136,29 @@ const button = document.getElementById("button"); // без решетки!
 // - Array.from(iterable)
 // - ... spread
 
-const productsList = document.querySelector(".products-list");
+// const productsList = document.querySelector(".products-list");
 // console.log(`productsList`, productsList);
 // const productsListElements = productsList.children;
-const productsListElements = document.querySelectorAll(".products-list__item");
+// const productsListElements = document.querySelectorAll(".products-list__item");
 // console.log(`productsListElements`, productsListElements);
 
 // Трансформация: 
 // const productsListElementsArray = Array.from(document.querySelectorAll('.products-list__item'));
-const productsListElementsArray = [
-  ...document.querySelectorAll(".products-list__item"),
-];
+// const productsListElementsArray = [
+  // ...document.querySelectorAll(".products-list__item"),
+// ];
 
 // console.log(`productsListElementsArray`, productsListElementsArray);
 
-const products = productsListElementsArray.map((li) => li.innerText);
+// const products = productsListElementsArray.map((li) => li.innerText);
 // console.log(`products`, products);
 
 
-const divs = document.querySelectorAll('div');
+// const divs = document.querySelectorAll('div');
 // console.log(`divs`, divs);
 
-const boxesContainer = document.querySelector('.boxes');
-console.log(`boxesContainer`, boxesContainer);
+// const boxesContainer = document.querySelector('.boxes');
+// console.log(`boxesContainer`, boxesContainer);
 
-const boxes = boxesContainer.querySelectorAll('div');
-console.log(`boxes`, boxes)
+// const boxes = boxesContainer.querySelectorAll('div');
+// console.log(`boxes`, boxes)

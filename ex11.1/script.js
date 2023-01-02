@@ -5,16 +5,23 @@
 // console.log(`element`, element);
 // console.dir(element);
 
-// element.innerText = "Hello i am div";
+// element.innerText = "Hello I am div";
 // console.dir(element);
+
+// const element1 = document.createElement("p");
+// console.log(`element1`, element1);
+// console.dir(element1);
+
+// element1.innerText = "Hello I am p";
+// console.dir(element1);
 
 // Добавление элементов
 // append
 
 // кудаДобавляем.append(...чтоДобавляем);
-// document.body.append(element);
+// document.body.append(element, element1);
 
-// element.innerText = "Changed text in div";
+// element.innerText = "Changed text in a div";
 
 // innerHTML
 
@@ -24,7 +31,7 @@
 
 // container.innerText = layout;
 // container.innerHTML = layout;
-
+ 
 // console.dir(container)
 
 // - append - добавляет элемент в конец элемента,
@@ -43,6 +50,7 @@
 //   не возвращает ничего
 // - append позволяет добавить сразу несколько элементов
 //   за раз, appendChild - только один элемент
+
 
 // const expamleContainer = document.querySelector(".example");
 // const child = document.createElement("p");
@@ -72,33 +80,34 @@
 
 // Клонирование элементов
 
-// const div = document.createElement("div");
-// div.innerText = "Element for cloning";
-// document.body.append(div);
+const div = document.createElement("div");
+div.innerText = "Element for cloning";
+document.body.append(div);
 // const newDiv = div; // error
-// const newDiv = div.cloneNode(true);
-// document.body.append(newDiv);
+const newDiv = div.cloneNode(true);
+document.body.append(newDiv);
 
 // elem.cloneNode(deep)
 
-// PRACICE
+// PRACTICE
 
 // Добавление нескольких элементов
-// const fruits = ["banana", "apple", "cherry", "pear"];
-// const renderList = (arr) => {
-//   const list = document.createElement('ul');
+const fruits = ["banana", "apple", "cherry", "pear"];
+const renderList = (arr) => {
+  const list = document.createElement('ul');
 
-//   arr.forEach((item) => {
-//     const listItem = document.createElement('li');
-//     listItem.innerText = item;
+  arr.forEach((item) => {
+    const listItem = document.createElement('li');
+    listItem.innerText = item;
 
-//     list.append(listItem);
-//   })
+    list.append(listItem);
+  })
 
-//   console.dir(list);
-//   document.body.append(list)
-// }
+  console.dir(list);
+  document.body.append(list)
+};
 
+renderList(fruits);
 // const renderList = (arr) => {
 //   const list = document.createElement('ul');
 
@@ -118,12 +127,12 @@
 // }
 
 // const renderList = (arr) => {
-//   const list = document.createElement("ul");
+  // const list = document.createElement("ul");
 
-//   const listHTML = arr.map((item) => `<li>${item}</li>`).join("");
+  // const listHTML = arr.map((item) => `<li>${item}</li>`).join("");
 
-//   console.log(`listHTML`, listHTML);
-//   list.innerHTML = listHTML;
+  // console.log(`listHTML`, listHTML);
+  // list.innerHTML = listHTML;
   // arr.forEach((item) => {
   //   const listItem = document.createElement('li');
   //   listItem.innerText = item;
@@ -131,8 +140,8 @@
   //   list.append(listItem);
   // })
 
-//   console.dir(list);
-//   document.body.append(list);
+  // console.dir(list);
+  // document.body.append(list);
 // };
 
 // renderList(fruits);
@@ -166,7 +175,7 @@
 //   console.log(blogContainer);
 
 //   return blogContainer;
-// };
+// // };
 
 // const createBlogArticle = (title, subtitle, text) => {
 //   const blogContainer = document.createElement("div");
