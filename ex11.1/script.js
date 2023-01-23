@@ -1,38 +1,29 @@
 // Editing Document
 
 // Create element
-// const element = document.createElement("div");
-// console.log(`element`, element);
+const element = document.createElement('div');
+console.log(element, 'element');
 // console.dir(element);
 
-// element.innerText = "Hello I am div";
-// console.dir(element);
+element.innerText = 'hello I am a div';
+console.dir(element);
 
-// const element1 = document.createElement("p");
-// console.log(`element1`, element1);
-// console.dir(element1);
+//Додавання елементів на сторінку
+// append 
 
-// element1.innerText = "Hello I am p";
-// console.dir(element1);
+// кудиДодаємо.append(що додаємо1, що додаємо2)
+document.body.append(element);
 
-// Добавление элементов
-// append
-
-// кудаДобавляем.append(...чтоДобавляем);
-// document.body.append(element, element1);
-
-// element.innerText = "Changed text in a div";
+element.innerText = 'Changed';
 
 // innerHTML
 
-// const container = document.createElement("div");
-// document.body.append(container);
-// const layout = "<h1>Heading</h1>";
+const container = document.createElement('div');
+document.body.append(container);
+const layout = '<h1>Heading</h1>';
+container.innerHTML = layout;
 
-// container.innerText = layout;
-// container.innerHTML = layout;
- 
-// console.dir(container)
+console.dir(container)
 
 // - append - добавляет элемент в конец элемента,
 //   у коготоро был вызван метод
@@ -51,14 +42,13 @@
 // - append позволяет добавить сразу несколько элементов
 //   за раз, appendChild - только один элемент
 
-
-// const expamleContainer = document.querySelector(".example");
-// const child = document.createElement("p");
-// child.innerText = "New Element";
+const expamleContainer = document.querySelector(".example");
+const child = document.createElement("p");
+child.innerText = "New Element";
 
 // expamleContainer.append(child);
 // expamleContainer.prepend(child);
-// expamleContainer.before(child);
+expamleContainer.before(child);
 // expamleContainer.after(child);
 // expamleContainer.children[0].replaceWith(child);
 
@@ -74,7 +64,7 @@
 // expamleContainer.innerHTML = ''
 // console.log(`exampleContainer.children`, expamleContainer.children)
 // const childrenArr = Array.from(expamleContainer.children)
-// const childrenArr = [...expamleContainer.children];
+const childrenArr = [...expamleContainer.children];
 
 // childrenArr.forEach((elem) => elem.remove())
 
@@ -89,25 +79,24 @@ document.body.append(newDiv);
 
 // elem.cloneNode(deep)
 
-// PRACTICE
+// PRACICE
 
 // Добавление нескольких элементов
 const fruits = ["banana", "apple", "cherry", "pear"];
-const renderList = (arr) => {
-  const list = document.createElement('ul');
+// const renderList = (arr) => {
+//   const list = document.createElement('ul');
 
-  arr.forEach((item) => {
-    const listItem = document.createElement('li');
-    listItem.innerText = item;
+//   arr.forEach((item) => {
+//     const listItem = document.createElement('li');
+//     listItem.innerText = item;
 
-    list.append(listItem);
-  })
+//     list.append(listItem);
+//   })
 
-  console.dir(list);
-  document.body.append(list)
-};
+//   console.dir(list);
+//   document.body.append(list)
+// }
 
-renderList(fruits);
 // const renderList = (arr) => {
 //   const list = document.createElement('ul');
 
@@ -126,13 +115,13 @@ renderList(fruits);
 //   document.body.append(list)
 // }
 
-// const renderList = (arr) => {
-  // const list = document.createElement("ul");
+const renderList = (arr) => {
+  const list = document.createElement("ul");
 
-  // const listHTML = arr.map((item) => `<li>${item}</li>`).join("");
+  const listHTML = arr.map((item) => `<li>${item}</li>`).join("");
 
-  // console.log(`listHTML`, listHTML);
-  // list.innerHTML = listHTML;
+  console.log(`listHTML`, listHTML);
+  list.innerHTML = listHTML;
   // arr.forEach((item) => {
   //   const listItem = document.createElement('li');
   //   listItem.innerText = item;
@@ -140,9 +129,9 @@ renderList(fruits);
   //   list.append(listItem);
   // })
 
-  // console.dir(list);
-  // document.body.append(list);
-// };
+  console.dir(list);
+  document.body.append(list);
+};
 
 // renderList(fruits);
 
@@ -175,27 +164,27 @@ renderList(fruits);
 //   console.log(blogContainer);
 
 //   return blogContainer;
-// // };
-
-// const createBlogArticle = (title, subtitle, text) => {
-//   const blogContainer = document.createElement("div");
-
-//   blogContainer.innerHTML = `
-//     <h2>${title}</h2>
-//     <h3>${subtitle}</h3>
-//     <div>
-//       ${text.map((textItem) => `<p>${textItem}</p>`).join("")}
-//     <div>
-// `;
-
-//   return blogContainer;
 // };
 
-// const blogItemElement = createBlogArticle("Hello World!", "My first article", [
-//   "a",
-//   "b",
-// ]);
-// document.body.append(blogItemElement);
+const createBlogArticle = (title, subtitle, text) => {
+  const blogContainer = document.createElement("div");
+
+  blogContainer.innerHTML = `
+    <h2>${title}</h2>
+    <h3>${subtitle}</h3>
+    <div>
+      ${text.map((textItem) => `<p>${textItem}</p>`).join("")}
+    <div>
+`;
+
+  return blogContainer;
+};
+
+const blogItemElement = createBlogArticle("Hello World!", "My first article", [
+  "a",
+  "b",
+]);
+document.body.append(blogItemElement);
 
 // div
 //   h2
