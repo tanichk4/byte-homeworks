@@ -1,18 +1,19 @@
 
-// const button = document.getElementById('tooltipButton');
+const createToolTip = (button, text) => {
 
-function createTooltip(relatedButton, text) {
-const element = document.getElementById('#tooltipText')
-element.innerText = text;
-};
+    const tooltip = document.createElement('div')
+    tooltip.classList.add('tooltip')
 
-createTooltip(x, 'bebra');
+    tooltip.innerText = text
 
 
-// const element = document.querySelector('#tooltipText')
-// element.innerText = "Hello i am a tooltip text";
+    document.body.append(tooltip);
 
-// function getMyToolTipFunction () {
-//     var popup = document.getElementById("tooltipText");
-//     popup.classList.toggle("show");
-// }
+    const anchorElemCoords = button.getBoundingClientRect()
+
+    const tooltipTop = anchorElemCoords.top - 10 - tooltip.clientHeight
+
+    const tooltipLeft = anchorElemCoords.left + anchorElemCoords.width / 2 - tooltip.clientWidth / 2;
+    tooltip.style.top = `${tooltipTop}px`
+    tooltip.style.left = `${tooltipLeft}px`
+}
